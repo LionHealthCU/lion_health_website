@@ -1,2 +1,2 @@
 # lionhealthwebsite
-The Official Website for Lion Health
+The Official Website for Columbia University's Lion Health 
