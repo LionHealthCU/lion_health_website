@@ -26,7 +26,6 @@ const projectsData = [
 
 export const Home: React.FC = () => (
   <div className="page">
-    {/* Hero Section */}
     <section className="hero">
       <div className="hero-content">
         <img src="/assets/logo.png" alt="LionHealth logo" className="hero-logo" />
@@ -39,7 +38,6 @@ export const Home: React.FC = () => (
       </div>
     </section>
 
-    {/* Who We Are Section */}
     <section className="section bg-white">
       <div className="container">
         <div className="grid grid-asymmetric">
@@ -68,7 +66,6 @@ export const Home: React.FC = () => (
       </div>
     </section>
 
-    {/* Current Projects Section */}
     <Section
       title="Current Projects"
       subtitle="Active projects pushing the boundaries of healthcare technology and accessibility."

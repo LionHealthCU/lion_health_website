@@ -1,129 +1,220 @@
 import React from 'react';
 import { PageHero } from '../components/PageHero';
-import { Section } from '../components/Section';
-import { Card } from '../components/Card';
 
 const leadershipData = [
   {
-    title: 'Founders',
-    imageText: 'Founders',
-    description: 'Leading the vision and strategic direction of LionHealth\'s mission to transform healthcare.',
-    leads: ['Lorem Ipsum', 'Dolor Sit Amet']
+    title: 'Co-Presidents',
+    leads: [
+      { 
+        name: 'Andre Perez', 
+        imageUrl: '/assets/headshots/Andre.jpg',
+        description: 'Biomedical Engineering | SEAS \'26'
+      },
+      { 
+        name: 'Caroline Schleif', 
+        imageUrl: '/assets/headshots/Caroline.jpg',
+        description: 'Chemical Engineering | SEAS \'26'
+      }
+    ]
   },
   {
-    title: 'Clinical Leads',
-    imageText: 'Clinical Leads',
-    description: 'Ensuring medical accuracy and clinical relevance in all healthcare solutions.',
-    leads: ['Consectetur Adipiscing', 'Sed Do Eiusmod']
+    title: 'Clinical Lead',
+    leads: [
+      { 
+        name: 'Lina Huang', 
+        imageUrl: '/assets/headshots/Lina.jpg',
+        description: 'Biology & Medical Humanities | CC \'26'
+      }
+    ]
   },
   {
-    title: 'Hardware Leads',
-    imageText: 'Hardware Leads',
-    description: 'Designing and developing innovative medical devices and hardware solutions.',
-    leads: ['Tempor Incididunt', 'Ut Labore Et']
+    title: 'Hardware Engineering Lead',
+    leads: [
+      { 
+        name: 'Harjaisal Brar', 
+        imageUrl: '/assets/headshots/Harjaisal.jpg',
+        description: 'Biomedical Engineering | SEAS \'28'
+      },
+      { 
+        name: 'Dayana Soza Soto', 
+        imageUrl: '/assets/headshots/Dayana.jpg',
+        description: 'Biomedical Engineering | SEAS \'26'
+      }
+    ]
   },
   {
-    title: 'Software Leads',
-    imageText: 'Software Leads',
-    description: 'Building scalable software platforms and digital health applications.',
-    leads: ['Dolore Magna', 'Aliqua Ut Enim']
+    title: 'Software Engineering Lead',
+    leads: [
+      { 
+        name: 'Rahi Mitra', 
+        imageUrl: '/assets/headshots/Rahi.jpg',
+        description: 'Computer Science & Economics | SEAS \'26'
+      },
+      { 
+        name: 'Maximillian Comfere', 
+        imageUrl: '/assets/headshots/Maximillian.jpg',
+        description: 'Computer Engineering | SEAS \'26'
+      }
+    ]
   },
   {
-    title: 'Business Leads',
-    imageText: 'Business Leads',
-    description: 'Driving business strategy, partnerships, and sustainable growth initiatives.',
-    leads: ['Minim Veniam', 'Quis Nostrud']
+    title: 'Business & Outreach Lead',
+    leads: [
+      { 
+        name: 'Millie Takeda-Byrne', 
+        imageUrl: '/assets/headshots/Millie.jpg',
+        description: 'Biology & Economics | Barnard \'27'
+      },
+      { 
+        name: 'Jessica Lee', 
+        imageUrl: '/assets/headshots/Jessica.jpg',
+        description: 'Engineering & Computer Science | Barnard \'27'
+      },
+      { 
+        name: 'Kristi Lam', 
+        imageUrl: '/assets/headshots/Kristi.jpg',
+        description: 'Biomedical Engineering | SEAS \'27'
+      }
+    ]
   },
   {
-    title: 'PR Leads',
-    imageText: 'PR Leads',
-    description: 'Managing communications, outreach, and building community engagement.',
-    leads: ['Exercitation Ullamco', 'Laboris Nisi']
+    title: 'PR & Communications Lead',
+    leads: [
+      { 
+        name: 'Chelsea Ekwughalu', 
+        imageUrl: '/assets/headshots/Chelsea.jpg',
+        description: 'Physics | Barnard \'27'
+      },
+      { 
+        name: 'Heera Santhosh', 
+        imageUrl: '/assets/headshots/Heera.jpg',
+        description: 'Neuroscience & Behavior | CC \'28'
+      }
+    ]
+  },
+  {
+    title: 'Secretary',
+    leads: [
+      { 
+        name: 'Alana Kwan', 
+        imageUrl: '/assets/headshots/Alana.jpg',
+        description: 'Chemical Engineering & Computer Science | CC \'26'
+      }
+    ]
   }
 ];
 
-const advisorsData = [
-  {
-    title: 'Dr. Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageText: 'Faculty Advisor',
-    role: 'Faculty Advisor',
-    animation: 'slide-left' as const
-  },
-  {
-    title: 'Dr. Dolor Sit Amet',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    imageText: 'Industry Expert',
-    role: 'Industry Advisor',
-    animation: 'slide-right' as const
-  }
-];
+const LeadershipSection: React.FC = () => {
+  const allTeamMembers = leadershipData.flatMap(section => 
+    section.leads.map(lead => ({
+      ...lead,
+      role: section.title
+    }))
+  );
 
-const LeadershipCard: React.FC<{ data: typeof leadershipData[0]; index: number }> = ({ data, index }) => (
-  <Card
-    title={data.title}
-    description={data.description}
-    imageText={data.imageText}
-    animationDelay={`${index * 0.1}s`}
-    variant="white"
-  >
-    <div style={{ marginBottom: 'var(--space-3)' }}>
-      {data.leads.map((lead, i) => (
-        <p key={i} className="text-caption text-aqua" style={{ marginBottom: 'var(--space-1)' }}>
-          {lead}
-        </p>
-      ))}
+  return (
+    <div style={{ 
+      maxWidth: '1200px', 
+      margin: '0 auto', 
+      padding: '0 var(--space-6)'
+    }}>
+      <h2 style={{ 
+        textAlign: 'center',
+        marginBottom: 'var(--space-16)',
+        fontWeight: 'var(--weight-bold)',
+        fontSize: '4rem',
+        color: 'var(--navy)'
+      }}>
+        Meet the team
+      </h2>
+      
+      <div style={{ 
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gap: 'var(--space-16)',
+        justifyContent: 'center'
+      }}>
+        {allTeamMembers.map((person, index) => (
+          <div key={index} style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center'
+          }}>
+              <img 
+                src={person.imageUrl} 
+                alt={person.name}
+                style={{
+                  width: '250px',
+                  height: '250px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  marginBottom: 'var(--space-4)',
+                  backgroundColor: '#f5f5f5'
+                }}
+              />
+            
+            <h3 style={{ 
+              margin: '0 0 var(--space-2) 0', 
+              fontWeight: 'var(--weight-bold)',
+              fontSize: '1.5rem',
+              color: 'var(--navy)',
+              lineHeight: '1.2'
+            }}>
+              {person.name}
+            </h3>
+            
+            <div style={{ textAlign: 'center' }}>
+              <p style={{ 
+                margin: '0 0 var(--space-1) 0', 
+                fontWeight: 'var(--weight-semibold)',
+                fontSize: '1.1rem',
+                color: 'var(--teal)',
+                lineHeight: '1.3'
+              }}>
+                {person.role}
+              </p>
+              <p style={{ 
+                margin: '0 0 var(--space-1) 0', 
+                fontWeight: 'var(--weight-normal)',
+                fontSize: '1rem',
+                color: 'var(--navy)',
+                opacity: 0.7,
+                lineHeight: '1.3'
+              }}>
+                {person.description.split(' | ')[0]}
+              </p>
+              <p style={{ 
+                margin: 0, 
+                fontWeight: 'var(--weight-normal)',
+                fontSize: '1rem',
+                color: 'var(--navy)',
+                opacity: 0.5,
+                lineHeight: '1.3'
+              }}>
+                {person.description.split(' | ')[1] || ''}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  </Card>
-);
-
-const AdvisorCard: React.FC<{ data: typeof advisorsData[0]; index: number }> = ({ data, index }) => (
-  <Card
-    title={data.title}
-    description={data.description}
-    imageText={data.imageText}
-    animationDelay={`${index * 0.1}s`}
-    animation={data.animation}
-    variant="white"
-  >
-    <p className="text-caption text-aqua" style={{ marginBottom: 'var(--space-3)' }}>
-      {data.role}
-    </p>
-  </Card>
-);
+  );
+};
 
 export const People: React.FC = () => (
   <div className="page">
     <PageHero 
       title="Our People" 
-      subtitle="Meet the passionate students and advisors driving health innovation" 
+      subtitle="Meet the students building LionHealth's healthcare innovations" 
     />
 
-    <Section
-      title="Leadership"
-      subtitle="The visionaries leading our mission to transform healthcare through engineering."
-      variant="white"
-      contentCenter
-    >
-      <div className="grid grid-3" style={{ marginTop: 'var(--space-16)' }}>
-        {leadershipData.map((data, index) => (
-          <LeadershipCard key={index} data={data} index={index} />
-        ))}
-      </div>
-    </Section>
-
-    <Section
-      title="Advisors"
-      subtitle="Industry experts and faculty mentors guiding our mission forward."
-      variant="white"
-      contentCenter
-      style={{ paddingTop: '0' }}
-    >
-      <div className="grid grid-2" style={{ marginTop: 'var(--space-16)' }}>
-        {advisorsData.map((data, index) => (
-          <AdvisorCard key={index} data={data} index={index} />
-        ))}
-      </div>
-    </Section>
+    <div style={{ 
+      backgroundColor: 'var(--white)', 
+      padding: 'var(--space-20) 0',
+      minHeight: '100vh'
+    }}>
+      <LeadershipSection />
+    </div>
   </div>
 );

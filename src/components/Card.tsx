@@ -4,6 +4,7 @@ interface CardProps {
   title: string;
   description: string;
   imageText: string;
+  imageUrl?: string;
   linkText?: string;
   linkHref?: string;
   animationDelay?: string;
@@ -16,6 +17,7 @@ export const Card: React.FC<CardProps> = ({
   title,
   description,
   imageText,
+  imageUrl,
   linkText = 'Learn More →',
   linkHref = '#',
   animationDelay = '0s',
@@ -25,9 +27,23 @@ export const Card: React.FC<CardProps> = ({
 }) => (
   <div className={`card ${variant === 'white' ? 'card-white' : ''} animate-${animation}`} style={{ animationDelay }}>
     <div className="card-visual">
-      <div className="placeholder-image">
-        <span>{imageText}</span>
-      </div>
+      {imageUrl ? (
+        <img 
+          src={imageUrl} 
+          alt={title}
+          className="card-image"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: 'var(--radius-md)'
+          }}
+        />
+      ) : (
+        <div className="placeholder-image">
+          <span>{imageText}</span>
+        </div>
+      )}
     </div>
     <div className="card-content">
       <h3 className="card-title">{title}</h3>

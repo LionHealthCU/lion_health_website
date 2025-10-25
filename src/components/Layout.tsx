@@ -59,7 +59,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               <span className="brand-text">LionHealth</span>
             </Link>
             
-            {/* Desktop Navigation */}
             <nav className="nav-links desktop-nav">
               {navItems.map(({ path, label }) => (
                 <Link 
@@ -73,7 +72,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link to="/contact" className="btn btn-outline">Get Involved</Link>
             </nav>
 
-            {/* Mobile Menu Button */}
             <button 
               className="mobile-menu-toggle"
               onClick={toggleMobileMenu}
@@ -87,7 +85,6 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             </button>
           </div>
 
-          {/* Mobile Navigation */}
           <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
             {navItems.map(({ path, label }) => (
               <Link key={path} to={path} className="mobile-nav-link" onClick={closeMobileMenu}>
