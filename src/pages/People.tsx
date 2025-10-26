@@ -1,111 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageHero } from '../components/PageHero';
 
-const leadershipData = [
-  {
-    title: 'Co-Presidents',
-    leads: [
-      { 
-        name: 'Andre Perez', 
-        imageUrl: '/assets/headshots/Andre.jpg',
-        description: 'Biomedical Engineering | SEAS \'26'
-      },
-      { 
-        name: 'Caroline Schleif', 
-        imageUrl: '/assets/headshots/Caroline.jpg',
-        description: 'Chemical Engineering | SEAS \'26'
-      }
-    ]
-  },
-  {
-    title: 'Clinical Lead',
-    leads: [
-      { 
-        name: 'Lina Huang', 
-        imageUrl: '/assets/headshots/Lina.jpg',
-        description: 'Biology & Medical Humanities | CC \'26'
-      }
-    ]
-  },
-  {
-    title: 'Hardware Engineering Lead',
-    leads: [
-      { 
-        name: 'Harjaisal Brar', 
-        imageUrl: '/assets/headshots/Harjaisal.jpg',
-        description: 'Biomedical Engineering | SEAS \'28'
-      },
-      { 
-        name: 'Dayana Soza Soto', 
-        imageUrl: '/assets/headshots/Dayana.jpg',
-        description: 'Biomedical Engineering | SEAS \'26'
-      }
-    ]
-  },
-  {
-    title: 'Software Engineering Lead',
-    leads: [
-      { 
-        name: 'Rahi Mitra', 
-        imageUrl: '/assets/headshots/Rahi.jpg',
-        description: 'Computer Science & Economics | SEAS \'26'
-      },
-      { 
-        name: 'Maximillian Comfere', 
-        imageUrl: '/assets/headshots/Maximillian.jpg',
-        description: 'Computer Engineering | SEAS \'26'
-      }
-    ]
-  },
-  {
-    title: 'Business & Outreach Lead',
-    leads: [
-      { 
-        name: 'Millie Takeda-Byrne', 
-        imageUrl: '/assets/headshots/Millie.jpg',
-        description: 'Biology & Economics | Barnard \'27'
-      },
-      { 
-        name: 'Jessica Lee', 
-        imageUrl: '/assets/headshots/Jessica.jpg',
-        description: 'Engineering & Computer Science | Barnard \'27'
-      },
-      { 
-        name: 'Kristi Lam', 
-        imageUrl: '/assets/headshots/Kristi.jpg',
-        description: 'Biomedical Engineering | SEAS \'27'
-      }
-    ]
-  },
-  {
-    title: 'PR & Communications Lead',
-    leads: [
-      { 
-        name: 'Chelsea Ekwughalu', 
-        imageUrl: '/assets/headshots/Chelsea.jpg',
-        description: 'Physics | Barnard \'27'
-      },
-      { 
-        name: 'Heera Santhosh', 
-        imageUrl: '/assets/headshots/Heera.jpg',
-        description: 'Neuroscience & Behavior | CC \'28'
-      }
-    ]
-  },
-  {
-    title: 'Secretary',
-    leads: [
-      { 
-        name: 'Alana Kwan', 
-        imageUrl: '/assets/headshots/Alana.jpg',
-        description: 'Chemical Engineering & Computer Science | CC \'26'
-      }
-    ]
-  }
-];
+interface Lead {
+  name: string;
+  imageUrl: string;
+  description: string;
+}
 
-const LeadershipSection: React.FC = () => {
-  const allTeamMembers = leadershipData.flatMap(section => 
+interface LeadershipSection {
+  title: string;
+  leads: Lead[];
+}
+
+const LeadershipSection: React.FC<{ data: LeadershipSection[] }> = ({ data }) => {
+  const allTeamMembers = data.flatMap(section => 
     section.leads.map(lead => ({
       ...lead,
       role: section.title
@@ -202,19 +110,58 @@ const LeadershipSection: React.FC = () => {
   );
 };
 
-export const People: React.FC = () => (
-  <div className="page">
-    <PageHero 
-      title="Our People" 
-      subtitle="Meet the students building LionHealth's healthcare innovations" 
-    />
+export const People: React.FC = () => {
+  const [leadershipData, setLeadershipData] = useState<LeadershipSection[]>([]);
+  const [loading, setLoading] = useState(true);
 
-    <div style={{ 
-      backgroundColor: 'var(--white)', 
-      padding: 'var(--space-20) 0',
-      minHeight: '100vh'
-    }}>
-      <LeadershipSection />
+  useEffect(() => {
+    fetch('/data/people.json')
+      .then(response => response.json())
+      .then(data => {
+        setLeadershipData(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error loading people data:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="page">
+        <PageHero 
+          title="Our People" 
+          subtitle="Meet the students building LionHealth's healthcare innovations" 
+        />
+        <div style={{ 
+          backgroundColor: 'var(--white)', 
+          padding: 'var(--space-20) 0',
+          minHeight: '100vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <p style={{ color: 'var(--navy)' }}>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="page">
+      <PageHero 
+        title="Our People" 
+        subtitle="Meet the students building LionHealth's healthcare innovations" 
+      />
+
+      <div style={{ 
+        backgroundColor: 'var(--white)', 
+        padding: 'var(--space-20) 0',
+        minHeight: '100vh'
+      }}>
+        <LeadershipSection data={leadershipData} />
+      </div>
     </div>
-  </div>
-);
+  );
+};

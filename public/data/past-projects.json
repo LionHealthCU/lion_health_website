@@ -1,0 +1,44 @@
+[
+  {
+    "title": "SUTURING DEVICE",
+    "year": "Summer 2025",
+    "projectName": "Subcutaneous Suturing Device",
+    "description": "Hardware project focused on developing an innovative suturing device with multiple iterations and comprehensive CAD models.",
+    "purpose": "Improve surgical suturing procedures with a faster and easier subcutaneous suture device.",
+    "aims": [
+      "Multiple prototype iterations completed",
+      "CAD models developed and refined",
+      "Testing and validation in progress"
+    ],
+    "progress": "v1, v2, and v3 prototypes completed with comprehensive CAD documentation",
+    "nextSteps": "Testing, refinement, and potential NIH DEBUT submission"
+  },
+  {
+    "title": "GESTURE CONTROLLER",
+    "year": "Summer 2025",
+    "projectName": "Assistive Gesture Control Device",
+    "description": "An assistive technology device designed to enable gesture-based control for improved accessibility and interaction.",
+    "purpose": "Enable users with mobility impairments to control devices through gesture recognition.",
+    "aims": [
+      "Gesture recognition technology",
+      "Integration with assistive devices",
+      "User-friendly interface development"
+    ],
+    "progress": "Core functionality developed and tested",
+    "nextSteps": "Continued refinement and user testing"
+  },
+  {
+    "title": "EYE TRACKER",
+    "year": "Summer 2025",
+    "projectName": "Optical Eye Tracking System",
+    "description": "Optical tracking system designed for monitoring and assisting users through advanced eye movement detection.",
+    "purpose": "Provide assistive control through eye movement tracking for users with limited mobility.",
+    "aims": [
+      "Precise eye movement detection",
+      "Optical path optimization",
+      "Real-time control integration"
+    ],
+    "progress": "Optical design completed, testing jigs developed, and initial calibration performed",
+    "nextSteps": "Further testing and integration with assistive devices"
+  }
+]

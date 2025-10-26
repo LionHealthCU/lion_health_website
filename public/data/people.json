@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Co-Presidents",
+    "leads": [
+      {
+        "name": "Andre Perez",
+        "imageUrl": "/assets/headshots/Andre.jpg",
+        "description": "Biomedical Engineering | SEAS '26"
+      },
+      {
+        "name": "Caroline Schleif",
+        "imageUrl": "/assets/headshots/Caroline.jpg",
+        "description": "Chemical Engineering | SEAS '26"
+      }
+    ]
+  },
+  {
+    "title": "Clinical Lead",
+    "leads": [
+      {
+        "name": "Lina Huang",
+        "imageUrl": "/assets/headshots/Lina.jpg",
+        "description": "Biology & Medical Humanities | CC '26"
+      }
+    ]
+  },
+  {
+    "title": "Hardware Engineering Lead",
+    "leads": [
+      {
+        "name": "Harjaisal Brar",
+        "imageUrl": "/assets/headshots/Harjaisal.jpg",
+        "description": "Biomedical Engineering | SEAS '28"
+      },
+      {
+        "name": "Dayana Soza Soto",
+        "imageUrl": "/assets/headshots/Dayana.jpg",
+        "description": "Biomedical Engineering | SEAS '26"
+      }
+    ]
+  },
+  {
+    "title": "Software Engineering Lead",
+    "leads": [
+      {
+        "name": "Rahi Mitra",
+        "imageUrl": "/assets/headshots/Rahi.jpg",
+        "description": "Computer Science & Economics | SEAS '26"
+      },
+      {
+        "name": "Maximillian Comfere",
+        "imageUrl": "/assets/headshots/Maximillian.jpg",
+        "description": "Computer Engineering | SEAS '26"
+      }
+    ]
+  },
+  {
+    "title": "Business & Outreach Lead",
+    "leads": [
+      {
+        "name": "Millie Takeda-Byrne",
+        "imageUrl": "/assets/headshots/Millie.jpg",
+        "description": "Biology & Economics | Barnard '27"
+      },
+      {
+        "name": "Jessica Lee",
+        "imageUrl": "/assets/headshots/Jessica.jpg",
+        "description": "Engineering & Computer Science | Barnard '27"
+      },
+      {
+        "name": "Kristi Lam",
+        "imageUrl": "/assets/headshots/Kristi.jpg",
+        "description": "Biomedical Engineering | SEAS '27"
+      }
+    ]
+  },
+  {
+    "title": "PR & Communications Lead",
+    "leads": [
+      {
+        "name": "Chelsea Ekwughalu",
+        "imageUrl": "/assets/headshots/Chelsea.jpg",
+        "description": "Physics | Barnard '27"
+      },
+      {
+        "name": "Heera Santhosh",
+        "imageUrl": "/assets/headshots/Heera.jpg",
+        "description": "Neuroscience & Behavior | CC '28"
+      }
+    ]
+  },
+  {
+    "title": "Secretary",
+    "leads": [
+      {
+        "name": "Alana Kwan",
+        "imageUrl": "/assets/headshots/Alana.jpg",
+        "description": "Chemical Engineering & Computer Science | CC '26"
+      }
+    ]
+  }
+]

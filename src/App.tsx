@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
-import { Projects } from './pages/Projects';
+import Projects from './pages/Projects';
 import { People } from './pages/People';
 import { Magazine } from './pages/Magazine';
 

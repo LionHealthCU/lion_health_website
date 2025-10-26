@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Software Team",
+    "description": "SomniQ - An intuitive iOS app that empowers users to track sleep episodes, record disturbances, and connect with a supportive community to address sleep disorders like insomnia, sleep apnea, and parasomnias.",
+    "imageText": "Software Team"
+  },
+  {
+    "title": "Public Relations Team",
+    "description": "The Mane Frame - A human-centered magazine documenting LionHealth projects, members, and scientific achievements to make medical engineering more accessible to the Columbia community.",
+    "imageText": "Public Relations Team"
+  },
+  {
+    "title": "Business Team",
+    "description": "Building partnerships with organizations, securing grants, and providing career development resources to support LionHealth's mission and growth.",
+    "imageText": "Business Team"
+  }
+]

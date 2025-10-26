@@ -1,0 +1,72 @@
+[
+  {
+    "title": "HARDWARE TEAM",
+    "year": "Fall 2025-Present",
+    "projectName": "Accessibility Devices",
+    "description": "Developing medical device prototypes including assistive technologies for accessibility, mobility aids, and stability devices in partnership with TCC and Blythedale Children's Hospital.",
+    "purpose": "All projects aim to improve accessibility, usability, and safety for individuals with impairments or disabilities.",
+    "aims": [
+      "Eye-tracking device for assistive control",
+      "Faster/easier suturing device (subcutaneous suture)",
+      "Wearable hand movement detection device"
+    ],
+    "goals": {
+      "shortTerm": "Deliver functional medical or assistive devices within a semester",
+      "longTerm": "NIH DEBUT competition submission and ongoing partnerships with healthcare facilities"
+    },
+    "progress": "Organizing teams, distributing projects, and planning CAD/prototyping workshops",
+    "nextSteps": "Launch project teams, host technical workshops, and begin prototype development"
+  },
+  {
+    "title": "SOFTWARE TEAM",
+    "year": "Summer 2025-Present",
+    "projectName": "SomniQ",
+    "description": "A comprehensive iOS app that empowers users to track sleep episodes, record disturbances, and connect with a supportive community to address sleep disorders.",
+    "purpose": "Address sleep disorders such as insomnia, sleep apnea, parasomnias, and conditions like sleepwalking, which affect millions and can pose serious injury risks. Traditional monitoring solutions are expensive, clinical, or unsustainable.",
+    "aims": [
+      "Provide an intuitive iOS app for tracking and monitoring sleep",
+      "Capture audio during sleep for disturbance detection",
+      "Build a supportive community platform"
+    ],
+    "goals": {
+      "shortTerm": "Deliver app with core features (sleep logging, audio recording, symptom tracking, data visualization, HealthKit integration, Firebase storage, community features)",
+      "longTerm": "Integrate AI insights, enable wearable compatibility, and collaborate with healthcare providers to enhance sleep health and safety"
+    },
+    "progress": "Core app structure completed in SwiftUI. Logging, audio recording/playback, and visualization functional. Privacy and security measures implemented.",
+    "nextSteps": "Testing, iteration, and public launch",
+    "link": "https://github.com/LionHealthCU/sleep_disorder_app"
+  },
+  {
+    "title": "PUBLIC RELATIONS TEAM",
+    "year": "Fall 2025-Present",
+    "projectName": "The Mane Frame",
+    "description": "Columbia's first human-centered publication documenting LionHealth projects, members, and scientific achievements in biomedical engineering and global health.",
+    "purpose": "There are currently no human- and story-centered medical engineering, physics, or global health magazines on campus. LionHealth needs a more narrative platform to demonstrate respectability and creativity as an organization.",
+    "aims": [
+      "Create an online site and physical zine for documenting photographs and stories about each team",
+      "Highlight projects and members",
+      "Provide scientific background articles connected to each department's projects",
+      "Offer a creative, approachable, and human-centered platform for science communication"
+    ],
+    "progress": "First issue planning underway with interviews and narrative articles in progress",
+    "nextSteps": "Begin interviews for articles, publish first issue"
+  },
+  {
+    "title": "BUSINESS TEAM",
+    "year": "Fall 2025-Present",
+    "projectName": "Partnerships & Funding",
+    "description": "Building partnerships with organizations, securing grants, and providing career development resources to support LionHealth's mission and growth.",
+    "purpose": "Secure funding for projects, build partnerships with companies/hospitals/nonprofits, and provide career development resources.",
+    "aims": [
+      "Find funding and sponsors",
+      "Create partnerships for events and site visits",
+      "Run career workshops"
+    ],
+    "goals": {
+      "shortTerm": "Finalize outreach email templates, sponsorship packet, and apply for first grants (including NIH DEBUT)",
+      "longTerm": "Build a steady funding pipeline, form ongoing partnerships, create a sustainable career support system, and improve task allocation"
+    },
+    "progress": "Outreach templates drafted, sponsorship packet started, and career interest forms circulated",
+    "nextSteps": "Finish outreach materials, plan networking/speaker event, and organize career workshops"
+  }
+]
