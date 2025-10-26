@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface LayoutProps {
@@ -7,8 +7,7 @@ interface LayoutProps {
 
 const navItems = [
   { path: '/projects', label: 'Projects' },
-  { path: '/people', label: 'People' },
-  { path: '/contact', label: 'Contact' }
+  { path: '/people', label: 'People' }
 ];
 
 const socialLinks = [
@@ -34,24 +33,14 @@ const socialLinks = [
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > window.innerHeight * 0.8);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
   
   return (
     <div>
-      <header className={`nav ${isScrolled ? 'scrolled' : ''}`}>
+      <header className="nav">
         <div className="container">
           <div className="nav-inner">
             <Link to="/" className="brand" onClick={closeMobileMenu}>
@@ -69,7 +58,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                   {label}
                 </Link>
               ))}
-              <Link to="/contact" className="btn btn-outline">Get Involved</Link>
+              <Link to="/magazine" className="btn btn-outline">Mane Frame</Link>
             </nav>
 
             <button 
@@ -91,8 +80,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {label}
               </Link>
             ))}
-            <Link to="/contact" className="btn btn-primary mobile-nav-btn" onClick={closeMobileMenu}>
-              Get Involved
+            <Link to="/magazine" className="btn btn-primary mobile-nav-btn" onClick={closeMobileMenu}>
+              Mane Frame
             </Link>
           </nav>
         </div>

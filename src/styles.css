@@ -725,3 +725,134 @@ img {
   .card-content { padding: var(--space-4); }
   .hero-logo { width: 100px; height: 100px; }
 }
+
+/* ========================================
+   PROJECT DETAIL CENTERING
+   ======================================== */
+
+.project-detail {
+  display: block;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE FIXES FOR PAGES
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Hide fixed navigation sidebar on Projects page on very small screens */
+  #project-nav {
+    display: none !important;
+  }
+  
+  /* Adjust content margins to full width when nav is hidden */
+  .projects-content {
+    margin-left: 0 !important;
+    padding: var(--space-12) var(--space-4) !important;
+  }
+  
+  /* Center all project content on mobile */
+  .projects-content > div {
+    max-width: 100% !important;
+    padding: 0 var(--space-4) !important;
+  }
+  
+  /* Ensure project details are centered */
+  .project-detail {
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: var(--space-8) var(--space-4) !important;
+  }
+  
+  /* Reduce spacing on mobile */
+  .project-detail > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  .project-detail h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .project-detail span {
+    margin-top: var(--space-2) !important;
+  }
+  
+  /* People page grid - stack vertically on mobile */
+  .people-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Make people page images smaller on mobile */
+  img[style*="width: '250px'"] {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  
+  /* Ensure text readability on small screens */
+  h2[style*="fontSize: '3rem'"] {
+    font-size: 2rem !important;
+  }
+  
+  h1[style*="fontSize: '2.5rem'"] {
+    font-size: 1.75rem !important;
+  }
+  
+  h2[style*="fontSize: '2rem'"] {
+    font-size: 1.5rem !important;
+  }
+  
+  h3[style*="fontSize: '1.5rem'"] {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Magazine page card grid - stack vertically */
+  [style*="gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))'"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Tablet adjustments */
+  .projects-content {
+    padding: var(--space-16) var(--space-6) !important;
+  }
+  
+  .projects-content > div {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Additional mobile adjustments */
+  img[style*="width: '250px'"] {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  
+  h2[style*="fontSize: '3rem'"] {
+    font-size: 1.75rem !important;
+  }
+  
+  /* Reduce spacing on very small screens */
+  .projects-content {
+    padding: var(--space-12) var(--space-4) !important;
+  }
+  
+  .project-detail {
+    padding: var(--space-6) var(--space-3) !important;
+  }
+  
+  .project-detail h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  .project-detail h4 {
+    font-size: 1rem !important;
+  }
+  
+  .project-detail p,
+  .project-detail li {
+    font-size: 0.9rem !important;
+  }
+}

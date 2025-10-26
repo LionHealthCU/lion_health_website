@@ -122,7 +122,7 @@ const LeadershipSection: React.FC = () => {
         textAlign: 'center',
         marginBottom: 'var(--space-16)',
         fontWeight: 'var(--weight-bold)',
-        fontSize: '4rem',
+        fontSize: '3rem',
         color: 'var(--navy)'
       }}>
         Meet the team
@@ -133,7 +133,7 @@ const LeadershipSection: React.FC = () => {
         gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
         gap: 'var(--space-16)',
         justifyContent: 'center'
-      }}>
+      }} className="people-grid">
         {allTeamMembers.map((person, index) => (
           <div key={index} style={{ 
             display: 'flex',

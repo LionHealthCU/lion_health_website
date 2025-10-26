@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Section } from '../components/Section';
@@ -5,22 +6,19 @@ import { Card } from '../components/Card';
 
 const projectsData = [
   {
-    title: 'Portable Diagnostic Kit',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageText: 'MedTech Device',
-    animationDelay: '0s'
+    title: 'Software Team',
+    description: 'SomniQ - An intuitive iOS app that empowers users to track sleep episodes, record disturbances, and connect with a supportive community to address sleep disorders like insomnia, sleep apnea, and parasomnias.',
+    imageText: 'Software Team'
   },
   {
-    title: 'AI Disease Detection',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    imageText: 'AI Health Platform',
-    animationDelay: '0.1s'
+    title: 'Public Relations Team',
+    description: 'The Mane Frame - A human-centered magazine documenting LionHealth projects, members, and scientific achievements to make medical engineering more accessible to the Columbia community.',
+    imageText: 'Public Relations Team'
   },
   {
-    title: 'Healthcare Access Program',
-    description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
-    imageText: 'Global Health Initiative',
-    animationDelay: '0.2s'
+    title: 'Business Team',
+    description: 'Building partnerships with organizations, securing grants, and providing career development resources to support LionHealth\'s mission and growth.',
+    imageText: 'Business Team'
   }
 ];
 
@@ -41,7 +39,7 @@ export const Home: React.FC = () => (
     <section className="section bg-white">
       <div className="container">
         <div className="grid grid-asymmetric">
-          <div className="animate-slide-left">
+          <div>
             <h2 className="text-display-2 text-navy">Who We Are</h2>
             <div className="text-body-large text-navy" style={{ marginTop: 'var(--space-6)' }}>
               <p>
@@ -55,12 +53,19 @@ export const Home: React.FC = () => (
               </p>
             </div>
           </div>
-          <div className="animate-slide-right">
-            <div className="card-visual" style={{ height: '400px', marginTop: 'var(--space-8)' }}>
-              <div className="placeholder-image">
-                <span>Healthcare Innovation</span>
-              </div>
-            </div>
+          <div>
+            <img 
+              src="/assets/group.jpg" 
+              alt="LionHealth team" 
+              style={{ 
+                width: '100%', 
+                height: 'auto', 
+                maxHeight: '400px',
+                objectFit: 'contain',
+                borderRadius: 'var(--radius-md)',
+                marginTop: 'var(--space-8)'
+              }} 
+            />
           </div>
         </div>
       </div>
@@ -68,7 +73,7 @@ export const Home: React.FC = () => (
 
     <Section
       title="Current Projects"
-      subtitle="Active projects pushing the boundaries of healthcare technology and accessibility."
+      subtitle="Active projects LionHealth members are working on"
       variant="gradient"
       contentCenter
     >
@@ -79,7 +84,6 @@ export const Home: React.FC = () => (
             title={project.title}
             description={project.description}
             imageText={project.imageText}
-            animationDelay={project.animationDelay}
           />
         ))}
       </div>

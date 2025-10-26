@@ -5,11 +5,8 @@ interface SectionProps {
   subtitle?: string;
   children: React.ReactNode;
   variant?: 'default' | 'white' | 'gradient';
-  className?: string;
-  style?: React.CSSProperties;
-  titleClassName?: string;
-  subtitleClassName?: string;
   contentCenter?: boolean;
+  reducedSpacing?: boolean;
 }
 
 export const Section: React.FC<SectionProps> = ({
@@ -17,32 +14,31 @@ export const Section: React.FC<SectionProps> = ({
   subtitle,
   children,
   variant = 'default',
-  className = '',
-  style = {},
-  titleClassName = '',
-  subtitleClassName = '',
   contentCenter = false,
+  reducedSpacing = false
 }) => {
-  const sectionClass = `section ${variant === 'white' ? 'bg-white' : variant === 'gradient' ? 'bg-gradient-primary' : ''} ${className}`;
+  const sectionClass = `section ${variant === 'white' ? 'bg-white' : variant === 'gradient' ? 'bg-gradient-primary' : ''}`;
   const contentClass = contentCenter ? 'text-center' : '';
   const titleColor = variant === 'white' ? 'text-navy' : 'text-white';
   const subtitleColor = variant === 'white' ? 'text-navy' : 'text-muted';
 
+  const paddingTop = reducedSpacing ? '0' : 'var(--space-20)';
+  const paddingBottom = 'var(--space-20)';
+
   return (
-    <section className={sectionClass} style={style}>
+    <section className={sectionClass} style={{ paddingTop, paddingBottom }}>
       <div className="container">
         <div className={contentClass}>
-          {title && <h2 className={`text-display-2 ${titleColor} ${titleClassName}`}>{title}</h2>}
-          {subtitle && (
-            <p 
-              className={`text-body-large ${subtitleColor} ${subtitleClassName}`} 
-              style={{ 
-                marginTop: 'var(--space-4)', 
-                maxWidth: '700px', 
-                margin: 'var(--space-4) auto 0', 
-                opacity: variant === 'white' ? 0.8 : 1 
-              }}
+          {title && (
+            <h2 
+              className={`text-display-2 ${titleColor}`}
+              style={{ fontSize: '3rem', fontWeight: 'var(--weight-bold)' }}
             >
+              {title}
+            </h2>
+          )}
+          {subtitle && (
+            <p className={`text-body-large ${subtitleColor}`} style={{ marginTop: 'var(--space-4)', maxWidth: '700px', margin: 'var(--space-4) auto 0', opacity: variant === 'white' ? 0.8 : 1 }}>
               {subtitle}
             </p>
           )}
