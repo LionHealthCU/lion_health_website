@@ -77,9 +77,59 @@ export const Home: React.FC = () => {
       </section>
 
       <Section
+        title="Upcoming Events"
+        variant="gradient"
+        contentCenter
+      >
+        <div style={{ 
+          marginTop: 'var(--space-16)', 
+          display: 'flex', 
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          gap: 'var(--space-4)'
+        }}>
+          <object
+            data="/assets/events/LH Panel Flyer.pdf"
+            type="application/pdf"
+            style={{
+              width: '100%',
+              maxWidth: '1200px',
+              height: 'auto',
+              minHeight: '800px',
+              borderRadius: 'var(--radius-md)',
+              boxShadow: 'var(--shadow-lg)',
+              display: 'block',
+              border: 'none'
+            }}
+            aria-label="Upcoming Events Flyer"
+          >
+            <p style={{ color: 'var(--white)', marginTop: 'var(--space-4)' }}>
+              Unable to display PDF. <a href="/assets/events/LH Panel Flyer.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--white)', textDecoration: 'underline' }}>Click here to view it</a>.
+            </p>
+          </object>
+          <a 
+            href="/assets/events/LH Panel Flyer.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              color: 'var(--white)',
+              textDecoration: 'underline',
+              marginTop: 'var(--space-4)',
+              fontSize: '0.9rem',
+              opacity: 0.9
+            }}
+          >
+            View PDF in new tab
+          </a>
+        </div>
+      </Section>
+
+      <Section
         title="Current Projects"
         subtitle="Active projects LionHealth members are working on"
-        variant="gradient"
+        variant="white"
         contentCenter
       >
         {loading ? (
@@ -95,6 +145,7 @@ export const Home: React.FC = () => {
                   title={project.title}
                   description={project.description}
                   imageText={project.imageText}
+                  variant="white"
                 />
               ))}
             </div>
