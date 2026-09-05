@@ -68,5 +68,67 @@
     },
     "progress": "Outreach templates drafted, sponsorship packet started, and career interest forms circulated",
     "nextSteps": "Finish outreach materials, plan networking/speaker event, and organize career workshops"
+  },
+  {
+    "title": "PCOS Diagnostic Device",
+    "year": "Summer 2026-Present",
+    "projectName": "PCOS Diagnostic Device",
+    "description": "an accessible device to track and provide object mesaurements of PCOS symptoms.",
+    "purpose": "Rather than relying on subjective symptom tracking, this device would standardize measurement of androgen-related physical changes such as hair density, hair growth, and sebum production over time, testing whether these features can meaningfully signal androgen activity and PCOS-related change.",
+    "aims": [
+      "Combine imaging and sensing modalities to objectively measure androgen-related physical changes, such as hair density, hair growth, and sebum production.",
+      "Identify which measurable features are most sensitive to androgen-related changes",
+      "Develop image- and signal-processing methods to quantify hair density, hair growth, and skin characteristics",
+      "Integrate measurements into an app to track changes over time, accounting for treatment and environmental factors",
+      "Investigate whether longitudinal data can distinguish PCOS-related changes from normal variation or other causes of similar symptoms",
+      "Validate measurements against established clinical biomarkers and diagnostic criteria"
+    ],
+    "goals": {
+      "shortTerm": "Recruit Members to join the team!",
+      "longTerm": "Develop an affordable, accessible wearable or at-home device that can provide objective, longitudinal measurements associated with PCOS to help individuals and clinicians identify patterns that may warrant further evaluation and monitor changes in symptoms over time."
+    },
+    "progress": "Project is still in early planning stages, with initial research and design concepts being explored.",
+    "nextSteps": "To be determined as the projects develop."
+  },
+  {
+    "title": "Novel Speculum",
+    "year": "Summer 2026-Present",
+    "projectName": "Novel Speculum",
+    "description": "A small, novel speculum that uses softer and comfortable materials, with integreated pressure and temperature sensors to monitor patient comfort and safety during gynecological exams.",
+    "purpose": "The design of the speculum hasn't been changed for years. Traditional speculums can cause discomfort, pressure, and anxiety, which may discourage patients from seeking routine care. This project aims to modify the Bouquet speculum while maintaining its demonstrated visibility and functional advantages and integrating materials, sensors, and mechanisms without compromising clinical usability.",
+    "aims": [
+      "Build upon the Bouquet speculum’s existing geometry, which has been shown to improve visibility and patient comfort.",
+      "Integrate pressure sensors to measure forces applied during speculum insertion, positioning, and cervical examination, providing feedback when excessive pressure is applied.",
+      "Incorporate temperature sensors to monitor the temperature of the speculum.",
+      "Develop a smart brush apparatus that limits excessive pressure during cervical cell collection.",
+      "Determine clinically appropriate pressure thresholds and translate sensor measurements into useful feedback that can help reduce patient discomfort."
+    ],
+    "goals": {
+      "shortTerm": "Recruit members to join the team!",
+      "longTerm": "Develop a speculum that makes procedures like Pap smears more comfortable, less painful, and more accessible. The device would combine patient-centered design with embedded sensing to provide clinicians with real-time feedback during examination and cervical cell collection."
+    },
+    "progress": "Project is still in early planning stages, with initial research and design concepts being explored.",
+    "nextSteps": "To be determined as the projects develop."
+  },
+  {
+    "title": "Acute Fluid Balance Change Detection Device",
+    "year": "Summer 2026-Present",
+    "projectName": "Acute Fluid Balance Change Detection Device",
+    "description": "A wearable device that combines multiple complementary sensing modalities, including photoplethysmography (PPG), bioimpedance, and near-infrared spectroscopy (NIR), to capture physiological changes following controlled water intake.",
+    "purpose": "Rather than continuously measuring water consumption, participants would undergo standardized hydration challenges (e.g., baseline measurement → drink a known volume of water → repeat measurements over time), allowing us to determine whether and how the sensor signals change with fluid intake.",
+    "aims": [
+      " Integrate commercially available sensors into a single prototype.",
+      "Determine which measurable optical and electrical signals most reliably reflect changes in fluid balance and whether combining modalities can provide information that is not available from any individual sensor.",
+      "Compare individual sensing modalities versus a multimodal approach.",
+      "Develop signal-processing and ML models to relate sensor measurements to controlled changes in hydration.",
+      "Explore different water volumes, measurement intervals, and physiological conditions.",
+      "Eventually validate the device against established physiological measurements and investigate whether it can quantify changes in fluid status."
+    ],
+    "goals": {
+      "shortTerm": "Recruit members to join the team!",
+      "longTerm": "Develop a non-invasive device to detect and eventually quantify acute changes in fluid status by combining complementary physiological sensing modalities, including photoplethysmography (PPG), bioimpedance, and near-infrared spectroscopy (NIR), following controlled water intake."
+    },
+    "progress": "Project is still in early planning stages, with initial research and design concepts being explored.",
+    "nextSteps": "To be determined as the projects develop."
   }
 ]

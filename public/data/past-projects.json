@@ -40,5 +40,19 @@
     ],
     "progress": "Optical design completed, testing jigs developed, and initial calibration performed",
     "nextSteps": "Further testing and integration with assistive devices"
+  },
+  {
+    "title": "S",
+    "year": "Summer 2025",
+    "projectName": "Smart Home Automation System",
+    "description": "A comprehensive smart home system designed to enhance convenience, security, and energy efficiency.",
+    "purpose": "Automate home functions for improved quality of life and energy management.",
+    "aims": [
+      "Integration of IoT devices",
+      "User-friendly control interface",
+      "Energy consumption monitoring"
+    ],
+    "progress": "System architecture defined, initial device integration completed",
+    "nextSteps": "Expand device compatibility and conduct user testing"
   }
 ]
