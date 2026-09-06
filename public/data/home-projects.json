@@ -1,17 +1,17 @@
 [
   {
-    "title": "Software Team",
-    "description": "SomniQ - An intuitive iOS app that empowers users to track sleep episodes, record disturbances, and connect with a supportive community to address sleep disorders like insomnia, sleep apnea, and parasomnias.",
-    "imageText": "Software Team"
+    "title": "PMOS Diagnostic Device",
+    "description": "A device that collects standarized measurements of androgen-related physical changes, such as hair density, hair growth, and sebum production for patients with PMOS",
+    "imageText": "PMOS Diagnostic Device"
   },
   {
-    "title": "Public Relations Team",
-    "description": "The Mane Frame - A human-centered magazine documenting LionHealth projects, members, and scientific achievements to make medical engineering more accessible to the Columbia community.",
-    "imageText": "Public Relations Team"
+    "title": "Novel Speculum",
+    "description": "A new speculum that uses softer and thermally comfortable materials, and integrated pressure and temperature sensors to improve patient comfort during pap smears and other gynecological exams.",
+    "imageText": "Novel Speculum"
   },
   {
-    "title": "Business Team",
-    "description": "Building partnerships with organizations, securing grants, and providing career development resources to support LionHealth's mission and growth.",
-    "imageText": "Business Team"
+    "title": "Acute Fluid Balance Detection Device",
+    "description": "A non-invasive device that monitors physiological changes following controlled water intake.",
+    "imageText": "Acute Fluid Balance Detection Device"
   }
 ]
